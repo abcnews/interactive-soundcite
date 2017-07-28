@@ -7,7 +7,6 @@ const qs = require('qs');
 domready(() => {
   Array.from(document.querySelectorAll('a[href*="?soundcite"]')).forEach((a) => {
     const params = qs.parse(a.search.substr(1));
-    if (!params['data-id']) return;
 
     const newNode = document.createElement('span');
     newNode.innerHTML = a.innerHTML;
